@@ -402,10 +402,10 @@ int main(int argc, char **argv)
 		data = 0;
 		if (bootmode == PIN_2ND_SPINOR || bootmode == PIN_2ND_SPINAND)
 			printf("error: not support clear bootinfo's board id in flashes\n");
-		else
+		else{
 			set_board_id_bootinfo(data);
-
-		printf("clear bootinfo boardid success!\n");
+			printf("clear bootinfo boardid success!\n");
+		}
 		break;
 	case 'h':
 		help();
